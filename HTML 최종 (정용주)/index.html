@@ -1,0 +1,790 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+			<title>간단한 지도 표시하기</title>
+			<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=y3m95zcwdi"></script>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>부동산 집 살때</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/니방2.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/니방2.png">
+
+	<!-- Google Fonts -->
+ 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet"> 
+
+	<!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	
+	<div id="wrapper">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 hidden-xs">
+                        <nav class="topbar-menu">
+                            <ul class="list-inline">
+                            	<li>Follow us: </li>
+                                <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul><!-- end list -->
+                        </nav><!-- end menu -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-6 col-sm-6">
+                        <nav class="topbar-menu">
+                            <ul class="list-inline text-right navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="images/kr.png" alt=""> Korea
+                                    <span class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><img src="images/tr.png" alt=""> Turkish</a></li>
+                                        <li><a href="#"><img src="images/si.png" alt=""> Spanish</a></li>
+                                        <li><a href="#"><img src="images/it.png" alt=""> Italian</a></li>
+                                        <li><a href="#"><img src="images/ae.png" alt=""> Arabic</a></li>
+                                        <li><a href="#"><img src="images/de.png" alt=""> German</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hidden-xs"><i class="fa fa-clock-o"></i> 09:00 - 18:00</li>
+                                <li><i class="fa fa-phone"></i> 010 6216 7081, 010-3426-5688</li>
+                            </ul><!-- end list -->
+                        </nav><!-- end menu -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end topbar -->
+
+		<header class="header site-header">
+			<div class="container">
+				<nav class="navbar navbar-default yamm">
+				    <div class="container-fluid">
+				        <div class="navbar-header">
+				            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				                <span class="sr-only">Toggle navigation</span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+				            </button>
+							<a class="navbar-brand" href="index.html"><img src="images/니방긴거.png" height="60" width="110" alt="Linda"></a>
+				        </div>
+				        <div id="navbar" class="navbar-collapse collapse">
+				            <ul class="nav navbar-nav navbar-right">
+				                <li class="active"><a href="index.html">홈</a></li>
+				                <li class="dropdown yamm-fw hasmenu">
+				                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">지역별 <span class="fa fa-angle-down"></span></a>
+						            <ul class="dropdown-menu">
+						                <li>
+						                    <div class="yamm-content">
+							                    <div class="row"> 
+													
+							                    	<div class="col-md-4">
+														
+														<ul>
+							                    			<li><a href="#강남구">강남구</a></li>
+							                    			<li><a href="#강동구">강동구</a></li>
+							                    			<li><a href="#강북구">강북구</a></li>
+							                    			<li><a href="#강서구">강서구</a></li>
+							                    			<li><a href="#관악구">관악구</a></li>
+							                    			<li><a href="#광진구">광진구</a></li>
+							                    			<li><a href="#구로구">구로구</a></li>
+							                    			<li><a href="#금천구">금천구</a></li>
+							                    			<li><a href="#노원구">노원구</a></li>
+							                    		</ul>
+							                    	</div>
+							                    	<div class="col-md-4">
+														<ul>
+							                    			<li><a href="#도봉구">도봉구</a></li>
+							                    			<li><a href="#동대문구">동대문구</a></li>
+							                    			<li><a href="#동작구">동작구</a></li>
+							                    			<li><a href="#마포구">마포구</a></li>
+							                    			<li><a href="#서대문구">서대문구</a></li>
+							                    			<li><a href="#서초구">서초구</a></li>
+							                    			<li><a href="#성동구">성동구</a></li>
+							                    			<li><a href="#성북구">성북구</a></li>
+							                    			
+							                    		</ul>
+							                    	</div>
+							                    	<div class="col-md-4">
+														<ul>
+							                    			<li><a href="#송파구">송파구</a></li>
+							                    			<li><a href="#양천구">양천구</a></li>
+							                    			<li><a href="#영등포">영등포구</a></li>
+							                    			<li><a href="#용산구">용산구</a></li>
+							                    			<li><a href="#은평구">은평구</a></li>
+							                    			<li><a href="#종로구">종로구</a></li>
+							                    			<li><a href="#중구">중구</a></li>
+							                    			<li><a href="#중랑구">중랑구
+															</a></li>
+							                    			
+							                    		</ul>
+							                    	</div>
+							                    </div>
+						                    </div>
+						                </li>
+						            </ul>
+				                </li>
+				                <li><a href="https://search.naver.com/search.naver?sm=tab_sug.top&where=nexearch&query=%EC%95%84%ED%8C%8C%ED%8A%B8+%EB%B6%84%EC%96%91%EC%A0%95%EB%B3%B4&oquery=%EB%B6%84%EC%96%91%EC%A0%95%EB%B3%B4&tqi=UQOkBdp0Jy0ssFwBkLlssssssbo-032850&acq=%EB%B6%84%EC%96%91%EC%A0%95%EB%B3%B4&acr=1&qdt=0">분양</a></li>
+				                <li><a href="https://www.courtauction.go.kr/">경매</a></li>
+							
+								<li><a href="page-contact.html">방내놓기</a></li>
+                                <li class="lastlink hidden-xs hidden-sm"><a class="btn btn-primary" href="https://land.naver.com/"><i class="glyphicon glyphicon-search"></i> 우리집알아보기</a></li>
+                            </ul>
+				        </div><!--/.nav-collapse -->
+				    </div><!--/.container-fluid -->
+				</nav><!-- end nav -->
+			</div><!-- end container -->
+		</header><!-- end header -->
+
+		<section class="section transheader homepage parallax" data-stellar-background-ratio="0.5" style="background-image:url('upload/흰바탕.jpg');">
+			<div class="container">
+				<div class="row">	
+					<div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
+						<p style="color: black; font-size: 50px;">
+							<span style="color:#1564F9">어떤 동네, 어떤 방</span>에서
+						</p>
+						<p style="color: black; font-size: 50px; margin-top: 40px;">
+							살고 싶으신가요?
+						</p>
+						<p class="lead" style="color:black; margin-top: 60px;">경석이도 지승이도 여기서 집샀다. 니방~</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+
+		<section class="section overfree">
+		
+			<div class="container">
+				
+
+				<div class="row service-list text-center">
+					<div class="col-md-4 col-sm-12 col-xs-12 first">
+						<div class="service-wrapper wow fadeIn">	
+							<i class="flaticon-competition"></i>
+							<div class="service-details">
+								<h4><a href="service-01.html" title="">What We Do</a></h4>
+								<p>합리적으로 집을 구하기 위해 집값을 분석.</p>
+								<a href="#" class="readmore">View Details</a>
+							</div>
+						</div><!-- end service-wrapper -->
+					</div><!-- end col -->
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<div class="service-wrapper wow fadeIn">	
+							<i class="flaticon-content"></i>
+							<div class="service-details">
+								<h4><a href="service-02.html" title="">Who We Are</a></h4>
+								<p>큰일나서 어떡할지 모르는 오합지졸들의 모임.</p>
+								<a href="#" class="readmore">View Details</a>
+							</div>
+						</div><!-- end service-wrapper -->
+					</div><!-- end col -->
+
+					<div class="col-md-4 col-sm-12 col-xs-12 last">
+						<div class="service-wrapper wow fadeIn">	
+							<i class="flaticon-html"></i>
+							<div class="service-details">
+								<h4><a href="service-02.html" title="">Our Mission</a></h4>
+								<p>더 많은 데이터를 축적해서 더 정확한 분석.</p>
+								<a href="#" class="readmore">View Details</a>
+							</div>
+						</div><!-- end service-wrapper -->
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr class="invis2">
+
+				<div class="row">
+					<div class="col-md-4">
+                        <div class="milestone-counter c1">
+                            <img src="images/icon_07.png" alt="" class="alignleft">
+                            <h3 class="stat-count">1101</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+
+					<div class="col-md-4">
+                        <div class="milestone-counter c2">
+                            <img src="images/icon_08.png" alt="" class="alignleft">
+                            <h3 class="stat-count">304</h3>
+                            <p>Online Strategy</p>
+                        </div>
+                    </div>
+
+					<div class="col-md-4">
+                        <div class="milestone-counter c3">
+                            <img src="images/icon_09.png" alt="" class="alignleft">
+                            <h3 class="stat-count">890</h3>
+                            <p>Great Results</p>
+                        </div>
+                    </div>
+                </div>
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+
+
+
+		<div id="map" style="width:600;height:600px;"></div>
+		
+		<script>
+	
+var HOME_PATH = window.HOME_PATH || '.';
+var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147),
+    map = new naver.maps.Map('map', {
+        center: cityhall,
+        zoom: 10
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: cityhall
+    });
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>서울특별시청</h3>',
+        '   <p>서울특별시 중구 세종대로 110 서울특별시청<br />',
+        '       02-120 | 공공,사회기관 &gt; 특별,광역시청<br />',
+        '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 140,
+    backgroundColor: "#eee",
+    borderColor: "#2db400",
+    borderWidth: 5,
+    anchorSize: new naver.maps.Size(15, 15),
+    anchorSkew: true,
+    anchorColor: "#eee",
+    pixelOffset: new naver.maps.Point(20, -20)
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+		</script>
+
+
+
+
+			
+		<section class="section bt">
+			<div class="container">
+				<div class="section-title text-center">
+					<small></small>
+					<h3>광역시 매물 가격비교 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="images/test.png">
+					<img src="images/test.png"  width="612" height="434"></a> 
+					
+								
+							
+				</div>
+			</div>
+		</section>
+
+			
+		<section class="section bt">
+			<div class="container">
+				<div class="section-title text-center">
+					<small></small>
+					<h3>서울 구별 가격비교 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="images/total_box.png">
+					<img src="images/total_box.png"  width="612" height="434"></a> 
+					
+								
+							
+				</div>
+			</div>
+		</section>
+
+
+		
+		<section class="section bt" id ="강남구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>강남구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="강남구.html">
+					<img src="images/강남구/7. gangnam_reg.png"  width="725" height="434"></a> 
+					
+								
+							
+				</div>
+				
+
+			</div>
+		</section>
+
+
+		
+	
+
+
+
+
+		<section class="section bt" id ="강동구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>강동구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="강동구.html">
+						<img src="images/강동구/gangdong_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="강북구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>강북구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="강북구.html">
+						<img src="images/강북구/gangbuk_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="강서구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>강서구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="강서구.html">
+						<img src="images/강서구/gangseo_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="관악구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>관악구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="관악구.html">
+						<img src="images/관악구/gwanak_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="광진구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>광진구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="광진구.html">
+						<img src="images/광진구/gwangjin_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="구로구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>구로구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="구로구.html">
+						<img src="images/구로구/guro_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="금천구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>금천구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="금천구.html">
+						<img src="images/금천구/geumcheon_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="노원구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>노원구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="노원구.html">
+						<img src="images/노원구/nowon_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="도봉구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>도봉구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="도봉구.html">
+						<img src="images/도봉구/dobong_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="동대문구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>동대문구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="동대문구.html">
+						<img src="images/동대문구/dongdaemun_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="동작구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 ㄴ강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>동작구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="동작구.html">
+						<img src="images/동작구/dongjak_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="마포구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>마포구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="마포구.html">
+						<img src="images/마포구/mapo_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="서대문구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>서대문구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="서대문구.html">
+						<img src="images/서대문구/seodaemun_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="서초구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>서초구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="서초구.html">
+						<img src="images/서초구/seocho_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="성동구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>성동구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="성동구.html">
+						<img src="images/성동구/seongdong_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="성북구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>성북구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="성북구.html">
+						<img src="images/성북구/seongbuk_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="송파구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>송파구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="송파구.html">
+						<img src="images/송파구/songpa_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="양천구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>양천구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="양천구.html">
+						<img src="images/양천구/yangcheon_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+			<section class="section bt" id ="영등포구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>영등포구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="영등포구.html">
+						<img src="images/영등포구/yeongdeungpo_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="용산구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>용산구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="용산구.html">
+						<img src="images/용산구/yongsan_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="은평구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>은평구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="은평구.html">
+						<img src="images/은평구/eunpyeong_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="종로구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>종로구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="종로구.html">
+						<img src="images/종로구/jongro_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="중구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기지역  LTV, DTI: 40% , 중도금대출, 발급요건 강화, 주담대 만기연장 제한, 기업자금대출제한</small>
+					<h3>중구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="중구.html">
+						<img src="images/중구/jung_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		<section class="section bt" id ="중랑구">
+			<div class="container">
+				<div class="section-title text-center">
+					<small>투기과열지역    LTV, DTI: 40%, 중도금대출 발급요건 강화, 분양권 전매제한 소유권이전등기시(최대 5년)</small>
+					<h3>중랑구 </h3>
+				</div><!-- end section-title -->
+			
+				<div style="text-align: center;" >
+					<br>
+					<br>
+					<a href="중랑구.html">
+						<img src="images/중랑구/jungrang_reg.png"  width="725" height="434"></a> 
+				</div>
+			</div>
+		</section>
+
+		
+
+
+
+		
+
+		
+
+		<footer class="footer secondary-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <p>&copy;The <a href="#">NiBang</a> Nib INC. All rights reserved.</p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="list-inline">
+                            <li>Designed: <a href="https://html.design">HTML Design</a></li>
+                        </ul>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+		</footer><!-- end second footer -->
+	</div><!-- end wrapper -->
+
+	<!-- jQuery Files -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+</html>
