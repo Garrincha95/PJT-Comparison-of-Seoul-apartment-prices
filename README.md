@@ -29,8 +29,8 @@
 
 >**데이터 분석**
 >
->* 서울특별시와 6개의 광역시(부산, 대구, 인천, 광주, 대전, 울산)의 아파트 크기별로 가격을 비교 분석
->* 서울특별시의 25개 지역 구의 매물가를 boxplot을 통해 비교 분석
+>* 서울특별시와 6개의 광역시(부산, 대구, 인천, 광주, 대전, 울산)의 아파트 크기별로 가격을 비교 분석![mc](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\main\mc.png)
+>* 서울특별시의 25개 지역 구의 매물가를 boxplot을 통해 비교 분석![total_box](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\main\total_box.png)
 >* 서울특별시의 25개 지역 구의 매매 건수와 가격을 시계열 추세를 이용하여 분석 시계열 추세를 이용하여 데이터, 추세요인, 계절요인, 불규칙요인을 분석
 >* 자기상관함수, 부분자기상관함수, 1차 차분을 이용하여 분석 법의 신뢰성 확인
 >* 서울특별시의 25개 지역 구와 층 범주로 다항회귀분석(면적, 매매가격)을 진행
@@ -39,17 +39,17 @@
 >
 > * 서울특별시와 6개의 광역시의 아파트 크기별 가격 비교 (Axes3D)
 > * 서울특별시의 25개 지역 구의 매물 가격 비교 분석 (Boxplot)
-> * 서울특별시의 25개 지역 구의 지난 10년간 매매 건수 그래프
-> * 서울특별시의 25개 지역 구의 매매 건수 시계열 추세 그래프
+> * 서울특별시의 25개 지역 구의 지난 10년간 매매 건수 그래프![1. gangnam_count_graph](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\1. gangnam_count_graph.png)
+> * 서울특별시의 25개 지역 구의 매매 건수 시계열 추세 그래프![2. gangnam_count_tsa](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\2. gangnam_count_tsa.png)
 > * 매매 건수의 ACF (자기상관함수), PACF (부분자기상관함수) 그래프
 > * 매매 건수의 1차 차분 그래프
-> * 매매 건수의 ARIMA 모형 그래프
-> * 서울특별시의 25개 지역 구의 지난 3년간 매매 가격 그래프
-> * 서울특별시의 25개 지역 구의 매매 가격 시계열 추세 그래프
+> * 매매 건수의 ARIMA 모형 그래프![3. gangnam_count_arima](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\3. gangnam_count_arima.png)
+> * 서울특별시의 25개 지역 구의 지난 3년간 매매 가격 그래프![4. gangnam_price_graph](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\4. gangnam_price_graph.png)
+> * 서울특별시의 25개 지역 구의 매매 가격 시계열 추세 그래프![5. gangnam_price_tsa](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\5. gangnam_price_tsa.png)
 > * 매매 가격의 ACF (자기상관함수), PACF (부분자기상관함수) 그래프
 > * 매매 가격의 1차 차분 그래프
-> * 매매 가격의 ARIMA 모형 그래프
-> * 서울특별시의 25개 지역 구와 층 범주 다항회귀분석(면적, 매매가격) 그래프
+> * 매매 가격의 ARIMA 모형 그래프![6. gangnam_price_arima](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\6. gangnam_price_arima.png)
+> * 서울특별시의 25개 지역 구와 층 범주 다항회귀분석(면적, 매매가격) 그래프![7. gangnam_reg](D:\Github\PJT-Comparison-of-Seoul-apartment-prices\python (이찬호, 정소현, 정용주)\image\강남구\7. gangnam_reg.png)
 
 > **분석 예측**
 >
